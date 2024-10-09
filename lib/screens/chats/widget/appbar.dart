@@ -4,6 +4,7 @@ import '../../../widgets/popup_menu_button.dart';
 
 PreferredSizeWidget chatAppBar() {
   return AppBar(
+    backgroundColor: Colors.black,
     title: const Text(
       'WhatsApp',
       style: TextStyle(

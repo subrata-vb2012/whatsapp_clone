@@ -53,10 +53,10 @@ class HomePage extends ReactiveStateWidget<HomePageController> {
                     icon: controller.currentIndex.value == index
                         ? Container(
                             decoration: BoxDecoration(
-                                color: Colors.green.shade900,
-                                borderRadius: BorderRadius.circular(50)),
+                                color: const Color(0xff648e66),
+                                borderRadius: BorderRadius.circular(20)),
                             padding: const EdgeInsets.symmetric(
-                                vertical: 3, horizontal: 16),
+                                vertical: 5, horizontal: 20),
                             child: Icon(bottomNavData.keys.elementAt(index)))
                         : Icon(bottomNavData.keys.elementAt(index)),
                     label: bottomNavData.values.elementAt(index)),
