@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:reactiv/reactiv.dart';
 import 'package:whatsapp_ui_clone/screens/chats/controller.dart';
 import 'package:whatsapp_ui_clone/screens/chats/widget/appbar.dart';
-import 'package:whatsapp_ui_clone/screens/chats/widget/chat_box.dart';
+import 'package:whatsapp_ui_clone/widgets/chat_box.dart';
 import 'package:whatsapp_ui_clone/screens/chats/widget/chat_filter_row.dart';
 import 'package:whatsapp_ui_clone/screens/chats/widget/floating_action_small.dart';
 import 'package:whatsapp_ui_clone/screens/chats/widget/floating_button.dart';
@@ -14,7 +14,7 @@ class ChatScreen extends ReactiveStateWidget<ChatController> {
   @override
   BindController<ChatController>? bindController() {
     // TODO: implement bindController
-    return BindController(controller: () => ChatController());
+    return BindController(controller: () => ChatController(),autoDispose: false);
   }
 
   @override
