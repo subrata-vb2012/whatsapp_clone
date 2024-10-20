@@ -7,14 +7,16 @@ class ChatBox extends StatelessWidget {
       required this.onTap,
       required this.name,
       required this.lastMessage,
-      required this.time,
-      required this.imageUrl});
+      this.time = '',
+      required this.imageUrl,
+      this.showBadge = false});
 
   final Function() onTap;
   final String imageUrl;
   final String name;
   final String lastMessage;
-  final String time;
+  final String? time;
+  final bool? showBadge;
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +24,25 @@ class ChatBox extends StatelessWidget {
       contentPadding: EdgeInsets.zero,
       titleAlignment: ListTileTitleAlignment.top,
       onTap: onTap,
-      leading: CircleAvatar(
-        radius: 25,
-        backgroundImage: NetworkImage(imageUrl),
+      leading: Stack(
+        clipBehavior: Clip.hardEdge,
+        alignment: Alignment.bottomRight,
+        children: [
+          CircleAvatar(
+            radius: 25,
+            backgroundImage: NetworkImage(imageUrl),
+          ),
+          if (showBadge == true)
+            const CircleAvatar(
+              radius: 12,
+              backgroundColor: Colors.black,
+              child: Badge(
+                padding: EdgeInsets.all(1),
+                backgroundColor: Colors.green,
+                label: Icon(Icons.add, size: 18, color: Colors.black),
+              ),
+            )
+        ],
       ),
       title: Text(name),
       subtitle: Text(
@@ -34,7 +52,7 @@ class ChatBox extends StatelessWidget {
             overflow: TextOverflow.ellipsis),
       ),
       trailing: Text(
-        time,
+        time!,
         style: const TextStyle(color: AppColorConst.fillTextColor),
       ),
     );
