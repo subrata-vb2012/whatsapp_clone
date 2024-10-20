@@ -14,7 +14,8 @@ class ChatScreen extends ReactiveStateWidget<ChatController> {
   @override
   BindController<ChatController>? bindController() {
     // TODO: implement bindController
-    return BindController(controller: () => ChatController(),autoDispose: false);
+    return BindController(
+        controller: () => ChatController(), autoDispose: false);
   }
 
   @override
@@ -25,7 +26,7 @@ class ChatScreen extends ReactiveStateWidget<ChatController> {
           listenable: controller.contactList,
           listener: (contact) {
             return ListView(
-              padding: const EdgeInsets.symmetric(horizontal: 5),
+              padding: const EdgeInsets.symmetric(horizontal: 18),
               children: [
                 AppTextField(
                   hintText: 'Ask Meta AI or Search',
