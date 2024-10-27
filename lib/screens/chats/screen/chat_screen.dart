@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:reactiv/reactiv.dart';
-import 'package:whatsapp_ui_clone/screens/chats/controller.dart';
+import 'package:whatsapp_ui_clone/screens/chats/controller/controller.dart';
 import 'package:whatsapp_ui_clone/screens/chats/widget/appbar.dart';
 import 'package:whatsapp_ui_clone/widgets/chat_box.dart';
 import 'package:whatsapp_ui_clone/screens/chats/widget/chat_filter_row.dart';
 import 'package:whatsapp_ui_clone/screens/chats/widget/floating_action_small.dart';
 import 'package:whatsapp_ui_clone/screens/chats/widget/floating_button.dart';
 import 'package:whatsapp_ui_clone/widgets/app_text_field.dart';
+import 'chat_details_screen.dart';
 
 class ChatScreen extends ReactiveStateWidget<ChatController> {
   const ChatScreen({super.key});
@@ -45,7 +46,15 @@ class ChatScreen extends ReactiveStateWidget<ChatController> {
                 if (controller.contactList.isNotEmpty)
                   ...controller.contactList.map((toElement) {
                     return ChatBox(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ChatDetailsScreen(
+                                      image: toElement.downloadUrl.toString(),
+                                      name: toElement.author.toString(),
+                                    )));
+                      },
                       name: toElement.author.toString(),
                       lastMessage:
                           toElement.author!.split(' ').reversed.join() +

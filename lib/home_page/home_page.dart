@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:reactiv/reactiv.dart';
 import 'package:whatsapp_ui_clone/home_page/controller.dart';
 import 'package:whatsapp_ui_clone/screens/call/call_screen.dart';
-import 'package:whatsapp_ui_clone/screens/chats/chat_screen.dart';
+import 'package:whatsapp_ui_clone/screens/chats/screen/chat_screen.dart';
 import 'package:whatsapp_ui_clone/screens/communities/community_screen.dart';
 import 'package:whatsapp_ui_clone/screens/updates/update_screen.dart';
 

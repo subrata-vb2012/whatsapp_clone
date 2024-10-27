@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reactiv/reactiv.dart';
-import 'package:whatsapp_ui_clone/screens/chats/controller.dart';
+import 'package:whatsapp_ui_clone/screens/chats/controller/controller.dart';
 import 'package:whatsapp_ui_clone/screens/updates/widget/screen_widget/channel_details.dart';
 import 'package:whatsapp_ui_clone/screens/updates/widget/screen_widget/mute_updates.dart';
 import 'package:whatsapp_ui_clone/screens/updates/widget/screen_widget/my_status.dart';

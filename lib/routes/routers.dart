@@ -4,7 +4,7 @@ import 'package:whatsapp_ui_clone/home_page/home_page.dart';
 import 'package:whatsapp_ui_clone/screens/call/call_screen.dart';
 import 'package:whatsapp_ui_clone/screens/communities/community_screen.dart';
 import 'package:whatsapp_ui_clone/screens/updates/update_screen.dart';
-import '../screens/chats/chat_screen.dart';
+import '../screens/chats/screen/chat_screen.dart';
 
 final GoRouter route = GoRouter(
     initialLocation: Path.homePage,
