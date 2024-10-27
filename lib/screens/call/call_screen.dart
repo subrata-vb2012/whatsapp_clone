@@ -4,7 +4,7 @@ import 'package:whatsapp_ui_clone/screens/call/widgets/appbar.dart';
 import 'package:whatsapp_ui_clone/screens/call/widgets/call_list.dart';
 import 'package:whatsapp_ui_clone/screens/call/widgets/call_screen_last.dart';
 import 'package:whatsapp_ui_clone/screens/call/widgets/no_contact_details_screen.dart';
-import 'package:whatsapp_ui_clone/screens/chats/controller.dart';
+import 'package:whatsapp_ui_clone/screens/chats/controller/controller.dart';
 import 'package:whatsapp_ui_clone/widgets/floating_button.dart';
 
 class CallScreen extends ReactiveStateWidget<ChatController> {

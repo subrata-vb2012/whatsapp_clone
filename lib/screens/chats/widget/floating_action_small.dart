@@ -6,6 +6,7 @@ class ChatFloatingActionSmall extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton.small(
+      heroTag: 'f',
       backgroundColor: Colors.white12,
       onPressed: () {},
       child: Image.asset(
