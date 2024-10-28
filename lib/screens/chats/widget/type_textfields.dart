@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reactiv/reactiv.dart';
 import 'package:whatsapp_ui_clone/screens/chats/controller/controller.dart';
-import '../../../utils/color.dart';
+import 'package:whatsapp_ui_clone/widgets/app_text_field.dart';
 
 class TypeTextfields extends ReactiveStateWidget<ChatController> {
   @override
@@ -17,24 +17,13 @@ class TypeTextfields extends ReactiveStateWidget<ChatController> {
     return Row(
       children: [
         Expanded(
-          child: TextField(
-            cursorColor: Colors.green,
+          child: AppTextField(
+            hintText: 'Message',
             onChanged: (value) {
               controller.messageType.value = value;
             },
-            onTapOutside: (v) {
-              FocusScope.of(context).unfocus();
-            },
-            decoration: InputDecoration(
-              border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(30),
-                  borderSide: BorderSide.none),
-              filled: true,
-              fillColor: AppColorConst.fillColor,
-              prefixIcon: const Icon(Icons.mood),
-              hintText: 'Message',
-              suffixIcon: const Icon(Icons.attach_file),
-            ),
+            prefixIcon: const Icon(Icons.mood),
+            suffixIcon: const Icon(Icons.attach_file),
           ),
         ),
         const SizedBox(width: 5),
