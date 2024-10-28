@@ -7,6 +7,22 @@ class Media extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final List<String> mediaList = [
+      'assets/status/status_1.jpg',
+      'assets/status/status_2.jpg',
+      'assets/status/status_3.jpg',
+      'assets/status/status_4.jpg',
+      'assets/status/status_5.jpg',
+      'assets/status/status_6.jpg',
+      'assets/status/status_7.jpg',
+      'assets/status/status_8.jpg',
+      'assets/status/status_9.jpg',
+      'assets/status/status_10.jpg',
+      'assets/status/status_11.jpg',
+      'assets/status/status_12.jpg',
+      'assets/status/status_13.jpg',
+      'assets/status/status_14.jpg',
+    ];
     return CommonContainer(
       child: Column(
         children: [
@@ -42,8 +58,8 @@ class Media extends StatelessWidget {
                   width: 140,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      image: const DecorationImage(
-                          image: NetworkImage('https://picsum.photos/200/300'),
+                      image: DecorationImage(
+                          image: AssetImage(mediaList[index]),
                           fit: BoxFit.cover)),
                 );
               }),
