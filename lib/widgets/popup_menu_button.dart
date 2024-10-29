@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_ui_clone/screens/pop_up_item_screen/settings_screen.dart';
 
 List<PopupMenuButton> popupMenuList = [
   chatScreenPopupMenu(),
@@ -29,9 +30,15 @@ PopupMenuButton chatScreenPopupMenu() => PopupMenuButton(
             value: 'Payment',
             child: Text('Payment'),
           ),
-          const PopupMenuItem(
+          PopupMenuItem(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const WhatAppsSettingScreen()));
+            },
             value: 'Setting',
-            child: Text('Setting'),
+            child: const Text('Setting'),
           ),
         ]);
 
@@ -45,17 +52,29 @@ PopupMenuButton updateScreenPopupMenu() => PopupMenuButton(
             value: 'Create channel',
             child: Text('Create channel'),
           ),
-          const PopupMenuItem(
+          PopupMenuItem(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const WhatAppsSettingScreen()));
+            },
             value: 'Setting',
-            child: Text('Setting'),
+            child: const Text('Setting'),
           ),
         ]);
 
 PopupMenuButton communityScreenPopupMenu() => PopupMenuButton(
     itemBuilder: (context) => [
-          const PopupMenuItem(
+          PopupMenuItem(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const WhatAppsSettingScreen()));
+            },
             value: 'Setting',
-            child: Text('Setting'),
+            child: const Text('Setting'),
           ),
         ]);
 
@@ -65,8 +84,14 @@ PopupMenuButton callScreenPopupMenu() => PopupMenuButton(
             value: 'Clear call log',
             child: Text('Clear call log'),
           ),
-          const PopupMenuItem(
+          PopupMenuItem(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const WhatAppsSettingScreen()));
+            },
             value: 'Setting',
-            child: Text('Setting'),
+            child: const Text('Setting'),
           ),
         ]);
