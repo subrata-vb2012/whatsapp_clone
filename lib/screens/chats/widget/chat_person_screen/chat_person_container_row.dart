@@ -18,33 +18,36 @@ class ChatPersonContainerRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        icon,
-        const SizedBox(width: 20),
-        Row(
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  text,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(color: textColor, fontSize: 16),
-                ),
-                if (subText!.isNotEmpty)
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 18.0),
+      child: Row(
+        children: [
+          icon,
+          const SizedBox(width: 25),
+          Row(
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
                   Text(
-                    subText!,
-                    style: const TextStyle(
-                        color: AppColorConst.fillTextColor, fontSize: 12),
+                    text,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(color: textColor, fontSize: 16),
                   ),
-              ],
-            ),
-            const SizedBox(width: 50),
-            widget == null ? const Text('') : widget!,
-          ],
-        ),
-      ],
+                  if (subText!.isNotEmpty)
+                    Text(
+                      subText!,
+                      style: const TextStyle(
+                          color: AppColorConst.fillTextColor, fontSize: 12),
+                    ),
+                ],
+              ),
+              const SizedBox(width: 50),
+              widget == null ? const Text('') : widget!,
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
